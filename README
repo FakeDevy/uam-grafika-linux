@@ -1,4 +1,5 @@
-This repository contains files to replicate my attempt to make projects on laboratories compile on ArchLinux
+This repository contains files to replicate my successful attempt
+to make projects compile on ArchLinux
 
 =====================================================
 BUILDING INSTRUCTIONS
@@ -14,7 +15,8 @@ $ sudo pacman -S assimp glew glm freeglut
 GENERAL INSTRUCTIONS
 =====================================================
 
-Any glew / freeglut #include must be transformed into absolute `#include <>` instead of `#include ""` and prepend with `GL/`
+Any glew / freeglut #include must be transformed into absolute `#include <>`
+instead of `#include ""` and prepend with `GL/`
 
 Example:
 < #include "glew.h>
@@ -22,5 +24,7 @@ Example:
 
 Any glm mention must be prepended with `glm/` and also be absolute.
 
-For some reason not all glm extensions will be visible. Search specific file in /usr/include/glm and import it directly. For example for `glm::eulerAngleY` I had to add:
+For some reason not all glm extensions will be visible. Search specific file in
+/usr/include/glm and import it directly. For example for `glm::eulerAngleY`
+I had to add:
 #include <glm/gtx/euler_angles.hpp>
