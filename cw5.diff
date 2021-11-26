@@ -1,0 +1,96 @@
+diff '--color=auto' -r a/src/Camera.h b/src/Camera.h
+3c3
+< #include "glm.hpp"
+---
+> #include <glm/glm.hpp>
+14c14
+< }
+\ No newline at end of file
+---
+> }
+diff '--color=auto' -r a/src/main_5_1.cpp b/src/main_5_1.cpp
+1,4c1,6
+< #include "glew.h"
+< #include "freeglut.h"
+< #include "glm.hpp"
+< #include "ext.hpp"
+---
+> #include <GL/glew.h>
+> #include <GL/freeglut.h>
+> #include <glm/glm.hpp>
+> #include <glm/ext.hpp>
+> #include <glm/gtx/euler_angles.hpp>
+> #include <glm/gtx/transform.hpp>
+97d98
+< 
+132d132
+< 
+diff '--color=auto' -r a/src/Render_Utils.cpp b/src/Render_Utils.cpp
+5,6c5,6
+< #include "glew.h"
+< #include "freeglut.h"
+---
+> #include <GL/glew.h>
+> #include <GL/freeglut.h>
+39c39
+<     
+---
+> 
+149c149
+< 	int numAttribs = std::min(VertexData::MAX_ATTRIBS, data.NumActiveAttribs);
+---
+> 	int numAttribs = std::min((int)VertexData::MAX_ATTRIBS, (int)data.NumActiveAttribs);
+diff '--color=auto' -r a/src/Render_Utils.h b/src/Render_Utils.h
+2,3c2,3
+< #include "glm.hpp"
+< #include "glew.h"
+---
+> #include <glm/glm.hpp>
+> #include <GL/glew.h>
+43c43
+< 		static const int MAX_ATTRIBS = 8;
+---
+> 		constexpr static const int MAX_ATTRIBS = 8;
+51c51
+< 	// 
+---
+> 	//
+54c54
+< 	
+---
+> 
+60c60
+< 	
+---
+> 
+72c72
+< }
+\ No newline at end of file
+---
+> }
+diff '--color=auto' -r a/src/Shader_Loader.h b/src/Shader_Loader.h
+3,4c3,4
+< #include "glew.h"
+< #include "freeglut.h"
+---
+> #include <GL/glew.h>
+> #include <GL/freeglut.h>
+29c29
+< }
+\ No newline at end of file
+---
+> }
+diff '--color=auto' -r a/src/Texture.h b/src/Texture.h
+2,4c2,4
+<  
+< #include "glew.h"
+< #include "freeglut.h"
+---
+> 
+> #include <GL/glew.h>
+> #include <GL/freeglut.h>
+15c15
+< }
+\ No newline at end of file
+---
+> }
